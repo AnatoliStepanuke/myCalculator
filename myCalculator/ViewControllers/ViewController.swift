@@ -1,12 +1,5 @@
 import UIKit
 
-// MARK: - Extensions
-extension UIButton {
-    func roundedButton() {
-        layer.cornerRadius = frame.size.width / 2
-    }
-}
-
 final class ViewController: UIViewController {
 
     // MARK: - Outlets

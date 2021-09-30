@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC9DFE542706249B0058D817 /* UIButton+roundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9DFE532706249B0058D817 /* UIButton+roundedCorner.swift */; };
 		DCB3150426FB2DD300F1CB2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3150326FB2DD300F1CB2C /* AppDelegate.swift */; };
 		DCB3150626FB2DD300F1CB2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3150526FB2DD300F1CB2C /* SceneDelegate.swift */; };
 		DCB3150826FB2DD300F1CB2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3150726FB2DD300F1CB2C /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC9DFE532706249B0058D817 /* UIButton+roundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+roundedCorner.swift"; sourceTree = "<group>"; };
 		DCB3150026FB2DD300F1CB2C /* myCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCB3150326FB2DD300F1CB2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCB3150526FB2DD300F1CB2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		DC9DFE55270624A70058D817 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC9DFE532706249B0058D817 /* UIButton+roundedCorner.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DCB314F726FB2DD300F1CB2C = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 		DCB3150226FB2DD300F1CB2C /* myCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				DC9DFE55270624A70058D817 /* Extensions */,
 				74EA647B27062000003B6024 /* Resources */,
 				74EA647A27061F1B003B6024 /* App */,
 				74EA647927061E4E003B6024 /* Storyboard */,
@@ -171,6 +182,7 @@
 			files = (
 				DCB3150826FB2DD300F1CB2C /* ViewController.swift in Sources */,
 				DCB3150426FB2DD300F1CB2C /* AppDelegate.swift in Sources */,
+				DC9DFE542706249B0058D817 /* UIButton+roundedCorner.swift in Sources */,
 				DCB3150626FB2DD300F1CB2C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
