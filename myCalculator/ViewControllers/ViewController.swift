@@ -5,16 +5,7 @@ final class ViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak private var mainOutputLabel: UILabel!
     
-    @IBOutlet weak private var zeroDigitButton: UIButton!
-    @IBOutlet weak private var oneDigitButton: UIButton!
-    @IBOutlet weak private var twoDigitButton: UIButton!
-    @IBOutlet weak private var threeDigitButton: UIButton!
-    @IBOutlet weak private var fourDigitButton: UIButton!
-    @IBOutlet weak private var fiveDigitButton: UIButton!
-    @IBOutlet weak private var sixDigitButton: UIButton!
-    @IBOutlet weak private var sevenDigitButton: UIButton!
-    @IBOutlet weak private var eightDigitButton: UIButton!
-    @IBOutlet weak private var nineDigitButton: UIButton!
+    @IBOutlet private var numbersOutletCollection: [UIButton]!
     
     @IBOutlet weak private var plusOperationButton: UIButton!
     @IBOutlet weak private var minusOperationButton: UIButton!
@@ -105,16 +96,10 @@ final class ViewController: UIViewController {
     
     // MARK: - Helpers
     private func roundedButtons() {
-        zeroDigitButton.layer.cornerRadius = 25.0
-        oneDigitButton.roundedButton()
-        twoDigitButton.roundedButton()
-        threeDigitButton.roundedButton()
-        fourDigitButton.roundedButton()
-        fiveDigitButton.roundedButton()
-        sixDigitButton.roundedButton()
-        sevenDigitButton.roundedButton()
-        eightDigitButton.roundedButton()
-        nineDigitButton.roundedButton()
+        // (AND &&) (OR ||)
+        
+        numbersOutletCollection.forEach { $0.roundedButton() } //🥤
+        
         equalsOperationButton.roundedButton()
         plusOperationButton.roundedButton()
         minusOperationButton.roundedButton()

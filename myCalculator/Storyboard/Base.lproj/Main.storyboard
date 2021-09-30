@@ -23,7 +23,7 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="27"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnH-pG-7rn">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnH-pG-7rn">
                                 <rect key="frame" x="16" y="612" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -35,7 +35,7 @@
                                     <action selector="enterButtonOneDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MEa-G9-JWU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gf3-8n-x8X">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gf3-8n-x8X">
                                 <rect key="frame" x="104" y="612" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -47,7 +47,7 @@
                                     <action selector="enterButtonTwoDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qL5-56-Tr0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2t1-se-BT3">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2t1-se-BT3">
                                 <rect key="frame" x="192" y="612" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -59,7 +59,7 @@
                                     <action selector="enterButtonThreeDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mnp-9g-P8q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOS-vg-vJ2">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOS-vg-vJ2">
                                 <rect key="frame" x="16" y="524" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -71,7 +71,7 @@
                                     <action selector="enterButtonFourDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pnS-kv-4W1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hm-Mk-0CS">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hm-Mk-0CS">
                                 <rect key="frame" x="104" y="524" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -83,7 +83,7 @@
                                     <action selector="enterButtonFiveDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SqT-IF-oiV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geA-Bc-bkT">
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geA-Bc-bkT">
                                 <rect key="frame" x="192" y="524" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -95,7 +95,7 @@
                                     <action selector="enterButtonSixDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HPM-3O-MEW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7H2-iN-34Y">
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7H2-iN-34Y">
                                 <rect key="frame" x="16" y="436" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -107,7 +107,7 @@
                                     <action selector="enterButtonSevenDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4he-qi-YBR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iI-hl-oft">
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iI-hl-oft">
                                 <rect key="frame" x="192" y="436" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -119,7 +119,7 @@
                                     <action selector="enterButtonNineDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sjj-i3-5US"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhO-Je-dzr">
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhO-Je-dzr">
                                 <rect key="frame" x="104" y="436" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -132,13 +132,16 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxA-qc-bg8">
-                                <rect key="frame" x="16" y="700" width="256" height="80"/>
+                                <rect key="frame" x="16" y="699" width="256" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="0">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="enterButtonZeroDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zTI-6o-Ajz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEc-Jk-lMa">
                                 <rect key="frame" x="279" y="698" width="80" height="80"/>
@@ -216,20 +219,20 @@
                     </view>
                     <connections>
                         <outlet property="clearFieldOperationButton" destination="jYU-2M-dla" id="zEU-CM-nFf"/>
-                        <outlet property="eightDigitButton" destination="FhO-Je-dzr" id="nrE-eP-3Rz"/>
                         <outlet property="equalsOperationButton" destination="OEc-Jk-lMa" id="QAG-ON-pLa"/>
-                        <outlet property="fiveDigitButton" destination="0hm-Mk-0CS" id="UbF-bC-bX1"/>
-                        <outlet property="fourDigitButton" destination="cOS-vg-vJ2" id="sYO-ZF-htf"/>
                         <outlet property="mainOutputLabel" destination="WPv-Np-uDe" id="Vs9-TD-UrF"/>
                         <outlet property="minusOperationButton" destination="u2R-tQ-nfd" id="RFS-SH-QGe"/>
-                        <outlet property="nineDigitButton" destination="9iI-hl-oft" id="YPf-to-ika"/>
-                        <outlet property="oneDigitButton" destination="MnH-pG-7rn" id="dkw-dt-I6J"/>
                         <outlet property="plusOperationButton" destination="orV-YY-85O" id="CsK-iM-hbc"/>
-                        <outlet property="sevenDigitButton" destination="7H2-iN-34Y" id="GJi-EL-5kD"/>
-                        <outlet property="sixDigitButton" destination="geA-Bc-bkT" id="9pS-zm-gmm"/>
-                        <outlet property="threeDigitButton" destination="2t1-se-BT3" id="IOU-I3-KSw"/>
-                        <outlet property="twoDigitButton" destination="Gf3-8n-x8X" id="dp5-2I-Dlc"/>
-                        <outlet property="zeroDigitButton" destination="gxA-qc-bg8" id="Z9z-iT-96f"/>
+                        <outletCollection property="numbersOutletCollection" destination="gxA-qc-bg8" collectionClass="NSMutableArray" id="G0a-O3-Gmf"/>
+                        <outletCollection property="numbersOutletCollection" destination="MnH-pG-7rn" collectionClass="NSMutableArray" id="ax1-Qc-Zye"/>
+                        <outletCollection property="numbersOutletCollection" destination="Gf3-8n-x8X" collectionClass="NSMutableArray" id="hOF-3z-urn"/>
+                        <outletCollection property="numbersOutletCollection" destination="2t1-se-BT3" collectionClass="NSMutableArray" id="sAL-on-SUy"/>
+                        <outletCollection property="numbersOutletCollection" destination="geA-Bc-bkT" collectionClass="NSMutableArray" id="xc0-ul-3No"/>
+                        <outletCollection property="numbersOutletCollection" destination="0hm-Mk-0CS" collectionClass="NSMutableArray" id="CgH-6L-kD6"/>
+                        <outletCollection property="numbersOutletCollection" destination="cOS-vg-vJ2" collectionClass="NSMutableArray" id="uWi-7U-QEC"/>
+                        <outletCollection property="numbersOutletCollection" destination="9iI-hl-oft" collectionClass="NSMutableArray" id="cqd-dm-9q7"/>
+                        <outletCollection property="numbersOutletCollection" destination="FhO-Je-dzr" collectionClass="NSMutableArray" id="PB6-fc-ncy"/>
+                        <outletCollection property="numbersOutletCollection" destination="7H2-iN-34Y" collectionClass="NSMutableArray" id="syc-eH-KES"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
