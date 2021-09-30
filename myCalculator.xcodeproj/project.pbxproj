@@ -37,6 +37,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74EA647827061E3A003B6024 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DCB3150726FB2DD300F1CB2C /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		74EA647927061E4E003B6024 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DCB3150926FB2DD300F1CB2C /* Main.storyboard */,
+				DCB3150E26FB2DD400F1CB2C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		74EA647A27061F1B003B6024 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DCB3150326FB2DD300F1CB2C /* AppDelegate.swift */,
+				DCB3150526FB2DD300F1CB2C /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		74EA647B27062000003B6024 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DCB3150C26FB2DD400F1CB2C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DCB314F726FB2DD300F1CB2C = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +90,10 @@
 		DCB3150226FB2DD300F1CB2C /* myCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				DCB3150326FB2DD300F1CB2C /* AppDelegate.swift */,
-				DCB3150526FB2DD300F1CB2C /* SceneDelegate.swift */,
-				DCB3150726FB2DD300F1CB2C /* ViewController.swift */,
-				DCB3150926FB2DD300F1CB2C /* Main.storyboard */,
-				DCB3150C26FB2DD400F1CB2C /* Assets.xcassets */,
-				DCB3150E26FB2DD400F1CB2C /* LaunchScreen.storyboard */,
+				74EA647B27062000003B6024 /* Resources */,
+				74EA647A27061F1B003B6024 /* App */,
+				74EA647927061E4E003B6024 /* Storyboard */,
+				74EA647827061E3A003B6024 /* ViewControllers */,
 				DCB3151126FB2DD400F1CB2C /* Info.plist */,
 			);
 			path = myCalculator;
