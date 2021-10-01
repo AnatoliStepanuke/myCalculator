@@ -13,19 +13,20 @@ final class ViewController: UIViewController {
     @IBOutlet weak private var clearFieldOperationButton: UIButton!
     
     // MARK: - Inner type
-    private enum SelectedOperation {
+    private enum MathOperation {
         case plus
         case minus
         case multiplication
         case division
-        case equals
         case clearField
+        case none
     }
     
     //MARK: - Properties
     //MARK: Private
 
     private var arrayOfValues: [Int] = []
+    private var selectedOperation: MathOperation = .none
     
     // MARK: - Actions
     
@@ -70,21 +71,25 @@ final class ViewController: UIViewController {
     }
     
     @IBAction private func enterButtonPlusDidTapped(_ sender: Any) {
-        let value = Int(mainOutputLabel.text ?? "") ?? 0
-        arrayOfValues.append(value)
-        updateOperation(operation: .plus)
+        arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
+        selectedOperation = .plus
+        mainOutputLabel.text = ""
     }
     
     @IBAction private func enterButtonMinusDidTapped(_ sender: Any) {
-        updateOperation(operation: .minus)
+        arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
+        selectedOperation = .minus
+        mainOutputLabel.text = ""
     }
     
     @IBAction private func enterButtonEqualsDidTapped(_ sender: Any) {
-        updateOperation(operation: .equals)
+        arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
+        calculateResult()
     }
     
     @IBAction private func enterButtonClearFieldDidTapped(_ sender: Any) {
-        updateOperation(operation: .clearField)
+        mainOutputLabel.text = ""
+        arrayOfValues.removeAll()
     }
     
     
@@ -95,6 +100,50 @@ final class ViewController: UIViewController {
     }
     
     // MARK: - Helpers
+    
+    private func calculateResult() {
+        switch selectedOperation {
+        case .plus:
+            var result = 0
+            arrayOfValues.forEach { i in
+                result += i
+            }
+            mainOutputLabel.text = "\(result)"
+        case .minus:
+            /*
+             60
+             -
+             40
+             */
+            var result = 0
+            var tmp = 0
+            var counter = 0
+            arrayOfValues.forEach { i in
+                if counter == 0 {
+                    tmp = i
+                } else {
+                    result = tmp - i
+                }
+                counter += 1
+            }
+            mainOutputLabel.text = "\(result)"
+        case .multiplication:
+            var result = 0
+            arrayOfValues.forEach { i in
+                result *= i
+            }
+            mainOutputLabel.text = "\(result)"
+        case .division:
+            var result = 0
+            arrayOfValues.forEach { i in
+                result /= i
+            }
+            mainOutputLabel.text = "\(result)"
+        case .clearField: mainOutputLabel.text = ""
+        case .none: break
+        }
+    }
+    
     private func roundedButtons() {
         // (AND &&) (OR ||)
         
@@ -104,33 +153,6 @@ final class ViewController: UIViewController {
         plusOperationButton.roundedButton()
         minusOperationButton.roundedButton()
         clearFieldOperationButton.roundedButton()
-    }
-
-    
-    private func updateOperation(operation: SelectedOperation) {
-        switch operation {
-        case .plus:
-//            let value = Int(mainOutputLabel.text ?? "") ?? 0
-//            arrayOfValues.append(value)
-            mainOutputLabel.text = ""
-            
-        case .equals:
-            var sum = 0
-            let value = Int(mainOutputLabel.text ?? "") ?? 0
-            arrayOfValues.append(value)
-            for number in arrayOfValues {
-                sum += number
-            }
-            mainOutputLabel.text = String(sum)
-            arrayOfValues.removeAll()
-        
-        case .clearField:
-            mainOutputLabel.text = ""
-            arrayOfValues.removeAll()
-        
-        default:
-            break
-        }
     }
 }
 
