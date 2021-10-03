@@ -9,8 +9,11 @@ final class ViewController: UIViewController {
     
     @IBOutlet weak private var plusOperationButton: UIButton!
     @IBOutlet weak private var minusOperationButton: UIButton!
+    @IBOutlet weak private var multiplicationOperationButton: UIButton!
+    @IBOutlet weak private var divisionOperationButton: UIButton!
     @IBOutlet weak private var equalsOperationButton: UIButton!
     @IBOutlet weak private var clearFieldOperationButton: UIButton!
+    
     
     // MARK: - Inner type
     private enum MathOperation {
@@ -82,9 +85,22 @@ final class ViewController: UIViewController {
         mainOutputLabel.text = ""
     }
     
+    @IBAction func enterButtonMultiplicationDidTapped(_ sender: Any) {
+        arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
+        selectedOperation = .multiplication
+        mainOutputLabel.text = ""
+    }
+    
+    @IBAction func enterButtonDivisionDidTapped(_ sender: Any) {
+        arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
+        selectedOperation = .division
+        mainOutputLabel.text = ""
+    }
+    
     @IBAction private func enterButtonEqualsDidTapped(_ sender: Any) {
         arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
         calculateResult()
+        arrayOfValues.removeAll()
     }
     
     @IBAction private func enterButtonClearFieldDidTapped(_ sender: Any) {
@@ -109,12 +125,8 @@ final class ViewController: UIViewController {
                 result += i
             }
             mainOutputLabel.text = "\(result)"
+            
         case .minus:
-            /*
-             60
-             -
-             40
-             */
             var result = 0
             var tmp = 0
             var counter = 0
@@ -127,18 +139,28 @@ final class ViewController: UIViewController {
                 counter += 1
             }
             mainOutputLabel.text = "\(result)"
+            
         case .multiplication:
-            var result = 0
+            var result = 1
             arrayOfValues.forEach { i in
                 result *= i
             }
             mainOutputLabel.text = "\(result)"
+            
         case .division:
             var result = 0
+            var counter = 0
+            var tmp = 0
             arrayOfValues.forEach { i in
-                result /= i
+                if counter == 0 {
+                    tmp = i
+                } else {
+                    result = tmp / i
+                }
+                counter += 1
             }
             mainOutputLabel.text = "\(result)"
+            
         case .clearField: mainOutputLabel.text = ""
         case .none: break
         }
@@ -149,10 +171,12 @@ final class ViewController: UIViewController {
         
         numbersOutletCollection.forEach { $0.roundedButton() } //🥤
         
-        equalsOperationButton.roundedButton()
         plusOperationButton.roundedButton()
         minusOperationButton.roundedButton()
+        multiplicationOperationButton.roundedButton()
+        divisionOperationButton.roundedButton()
         clearFieldOperationButton.roundedButton()
+        equalsOperationButton.roundedButton()
     }
 }
 

@@ -167,16 +167,6 @@
                                     <action selector="enterButtonPlusDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKe-MI-BBh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1e-SK-pEX">
-                                <rect key="frame" x="279" y="436" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="*">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2R-tQ-nfd">
                                 <rect key="frame" x="279" y="524" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -212,6 +202,22 @@
                                 <state key="normal" title="/">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="enterButtonDivisionDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E8o-2N-QO7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1e-SK-pEX">
+                                <rect key="frame" x="279" y="436" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="*">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterButtonMultiplicationDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yne-RG-gnf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -219,9 +225,11 @@
                     </view>
                     <connections>
                         <outlet property="clearFieldOperationButton" destination="jYU-2M-dla" id="zEU-CM-nFf"/>
-                        <outlet property="equalsOperationButton" destination="OEc-Jk-lMa" id="QAG-ON-pLa"/>
+                        <outlet property="divisionOperationButton" destination="1gv-x8-8cl" id="Elj-4o-ZxV"/>
+                        <outlet property="equalsOperationButton" destination="OEc-Jk-lMa" id="kO0-ZO-Qwd"/>
                         <outlet property="mainOutputLabel" destination="WPv-Np-uDe" id="Vs9-TD-UrF"/>
                         <outlet property="minusOperationButton" destination="u2R-tQ-nfd" id="RFS-SH-QGe"/>
+                        <outlet property="multiplicationOperationButton" destination="A1e-SK-pEX" id="RKg-gP-uE5"/>
                         <outlet property="plusOperationButton" destination="orV-YY-85O" id="CsK-iM-hbc"/>
                         <outletCollection property="numbersOutletCollection" destination="gxA-qc-bg8" collectionClass="NSMutableArray" id="G0a-O3-Gmf"/>
                         <outletCollection property="numbersOutletCollection" destination="MnH-pG-7rn" collectionClass="NSMutableArray" id="ax1-Qc-Zye"/>
