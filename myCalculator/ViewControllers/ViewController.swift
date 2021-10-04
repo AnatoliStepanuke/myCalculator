@@ -6,14 +6,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak private var mainOutputLabel: UILabel!
     
     @IBOutlet private var numbersOutletCollection: [UIButton]!
-    
-    @IBOutlet weak private var plusOperationButton: UIButton!
-    @IBOutlet weak private var minusOperationButton: UIButton!
-    @IBOutlet weak private var multiplicationOperationButton: UIButton!
-    @IBOutlet weak private var divisionOperationButton: UIButton!
-    @IBOutlet weak private var equalsOperationButton: UIButton!
-    @IBOutlet weak private var clearFieldOperationButton: UIButton!
-    
+    @IBOutlet var operationsOutletCollection: [UIButton]!
     
     // MARK: - Inner type
     private enum MathOperation {
@@ -170,13 +163,7 @@ final class ViewController: UIViewController {
         // (AND &&) (OR ||)
         
         numbersOutletCollection.forEach { $0.roundedButton() } //🥤
-        
-        plusOperationButton.roundedButton()
-        minusOperationButton.roundedButton()
-        multiplicationOperationButton.roundedButton()
-        divisionOperationButton.roundedButton()
-        clearFieldOperationButton.roundedButton()
-        equalsOperationButton.roundedButton()
+        operationsOutletCollection.forEach { $0.roundedButton() }
     }
 }
 
