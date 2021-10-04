@@ -6,7 +6,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak private var mainOutputLabel: UILabel!
     
     @IBOutlet private var numbersOutletCollection: [UIButton]!
-    @IBOutlet var operationsOutletCollection: [UIButton]!
+    @IBOutlet private var operationsOutletCollection: [UIButton]!
     
     // MARK: - Inner type
     private enum MathOperation {
@@ -144,15 +144,18 @@ final class ViewController: UIViewController {
             var result = 0
             var counter = 0
             var tmp = 0
-            arrayOfValues.forEach { i in
+            
+            arrayOfValues.forEach { value in
                 if counter == 0 {
-                    tmp = i
+                    tmp = value
+                } else if value == 0 {
+                    mainOutputLabel.text = "can't divide by zero."
                 } else {
-                    result = tmp / i
+                    result = tmp / value
+                    mainOutputLabel.text = "\(result)"
                 }
                 counter += 1
             }
-            mainOutputLabel.text = "\(result)"
             
         case .clearField: mainOutputLabel.text = ""
         case .none: break
