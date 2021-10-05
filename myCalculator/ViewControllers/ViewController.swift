@@ -62,10 +62,6 @@ final class ViewController: UIViewController {
         mainOutputLabel.text! += "8"
     }
     
-    @IBAction private func enterButtonNineDidTapped(_ sender: Any) {
-        mainOutputLabel.text! += "9"
-    }
-    
     @IBAction private func enterButtonPlusDidTapped(_ sender: Any) {
         arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
         selectedOperation = .plus
@@ -106,9 +102,26 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         roundedButtons()
+        setupButtonAction()
     }
     
     // MARK: - Helpers
+    
+    private func setupButtonAction() {
+//        let nineButton = numbersOutletCollection.filter { $0.tag == 9 }.first
+//        guard let nine = nineButton else { return }
+//        nine.addTarget(self, action: #selector(nineDidTapped), for: .touchUpInside)
+        
+        numbersOutletCollection.forEach { button in
+            if button.tag == 9 {
+                button.addTarget(self, action: #selector(nineDidTapped), for: .touchUpInside)
+            }
+        }
+    }
+    
+    @objc private func nineDidTapped() {
+        mainOutputLabel.text! += "9"
+    }
     
     private func calculateResult() {
         switch selectedOperation {
