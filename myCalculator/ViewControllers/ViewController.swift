@@ -20,107 +20,63 @@ final class ViewController: UIViewController {
     
     //MARK: - Properties
     //MARK: Private
-
     private var arrayOfValues: [Int] = []
     private var selectedOperation: MathOperation = .none
-    
-    // MARK: - Actions
-    
-    @IBAction private func enterButtonZeroDidTapped(_ sender: Any) {
-        mainOutputLabel.text! += "0"
-    }
-    
-    @IBAction private func enterButtonOneDidTapped(_ sender: Any) {
-        mainOutputLabel.text! += "1"
-    }
-    
-    @IBAction private func enterButtonTwoDidTapped(_ sender: Any) {
-        mainOutputLabel.text! += "2"
-    }
-    
-    @IBAction private func enterButtonThreeDidTapped(_ sender: Any) {
-        mainOutputLabel.text! += "3"
-    }
-    
-    @IBAction private func enterButtonFourDidTapped(_ sender: Any) {
-        mainOutputLabel.text! += "4"
-    }
-    
-    @IBAction private func enterButtonFiveDidTapped(_ sender: Any) {
-        mainOutputLabel.text! += "5"
-    }
-    
-    @IBAction private func enterButtonSixDidTapped(_ sender: Any) {
-        mainOutputLabel.text! += "6"
-    }
-    
-    @IBAction private func enterButtonSevenDidTapped(_ sender: Any) {
-        mainOutputLabel.text! += "7"
-    }
-    
-    @IBAction private func enterButtonEightDidTapped(_ sender: Any) {
-        mainOutputLabel.text! += "8"
-    }
-    
-    @IBAction private func enterButtonPlusDidTapped(_ sender: Any) {
-        arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
-        selectedOperation = .plus
-        mainOutputLabel.text = ""
-    }
-    
-    @IBAction private func enterButtonMinusDidTapped(_ sender: Any) {
-        arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
-        selectedOperation = .minus
-        mainOutputLabel.text = ""
-    }
-    
-    @IBAction func enterButtonMultiplicationDidTapped(_ sender: Any) {
-        arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
-        selectedOperation = .multiplication
-        mainOutputLabel.text = ""
-    }
-    
-    @IBAction func enterButtonDivisionDidTapped(_ sender: Any) {
-        arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
-        selectedOperation = .division
-        mainOutputLabel.text = ""
-    }
-    
-    @IBAction private func enterButtonEqualsDidTapped(_ sender: Any) {
-        arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
-        calculateResult()
-        arrayOfValues.removeAll()
-    }
-    
-    @IBAction private func enterButtonClearFieldDidTapped(_ sender: Any) {
-        mainOutputLabel.text = ""
-        arrayOfValues.removeAll()
-    }
-    
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         roundedButtons()
-        setupButtonAction()
+        setupButtonActions()
     }
     
     // MARK: - Helpers
-    
-    private func setupButtonAction() {
-//        let nineButton = numbersOutletCollection.filter { $0.tag == 9 }.first
-//        guard let nine = nineButton else { return }
-//        nine.addTarget(self, action: #selector(nineDidTapped), for: .touchUpInside)
-        
-        numbersOutletCollection.forEach { button in
-            if button.tag == 9 {
-                button.addTarget(self, action: #selector(nineDidTapped), for: .touchUpInside)
+    private func setupButtonActions() {
+        numbersOutletCollection.forEach { buttonNumber in
+            switch buttonNumber.tag {
+            case 0:
+                buttonNumber.addTarget(self, action: #selector(zeroDidTapped), for: .touchUpInside)
+            case 1:
+                buttonNumber.addTarget(self, action: #selector(oneDidTapped), for: .touchUpInside)
+            case 2:
+                buttonNumber.addTarget(self, action: #selector(twoDidTapped), for: .touchUpInside)
+            case 3:
+                buttonNumber.addTarget(self, action: #selector(threeDidTapped), for: .touchUpInside)
+            case 4:
+                buttonNumber.addTarget(self, action: #selector(fourDidTapped), for: .touchUpInside)
+            case 5:
+                buttonNumber.addTarget(self, action: #selector(fiveDidTapped), for: .touchUpInside)
+            case 6:
+                buttonNumber.addTarget(self, action: #selector(sixDidTapped), for: .touchUpInside)
+            case 7:
+                buttonNumber.addTarget(self, action: #selector(sevenDidTapped), for: .touchUpInside)
+            case 8:
+                buttonNumber.addTarget(self, action: #selector(eightDidTapped), for: .touchUpInside)
+            case 9:
+                buttonNumber.addTarget(self, action: #selector(nineDidTapped), for: .touchUpInside)
+            default:
+                break
             }
         }
-    }
-    
-    @objc private func nineDidTapped() {
-        mainOutputLabel.text! += "9"
+        
+        operationsOutletCollection.forEach { buttonOperation in
+            switch buttonOperation.tag {
+            case 10:
+                buttonOperation.addTarget(self, action: #selector(plusDidTapped), for: .touchUpInside)
+            case 11:
+                buttonOperation.addTarget(self, action: #selector(minusDidTapped), for: .touchUpInside)
+            case 12:
+                buttonOperation.addTarget(self, action: #selector(multiplicationDidTapped), for: .touchUpInside)
+            case 13:
+                buttonOperation.addTarget(self, action: #selector(divisionDidTapped), for: .touchUpInside)
+            case 14:
+                buttonOperation.addTarget(self, action: #selector(clearFieldDidTapped), for: .touchUpInside)
+            case 15:
+                buttonOperation.addTarget(self, action: #selector(equalDidTapped), for: .touchUpInside)
+            default:
+                break
+            }
+        }
     }
     
     private func calculateResult() {
@@ -180,6 +136,81 @@ final class ViewController: UIViewController {
         
         numbersOutletCollection.forEach { $0.roundedButton() } //🥤
         operationsOutletCollection.forEach { $0.roundedButton() }
+    }
+    
+    @objc private func zeroDidTapped() {
+        mainOutputLabel.text! += "0"
+    }
+    
+    @objc private func oneDidTapped() {
+        mainOutputLabel.text! += "1"
+    }
+    
+    @objc private func twoDidTapped() {
+        mainOutputLabel.text! += "2"
+    }
+    
+    @objc private func threeDidTapped() {
+        mainOutputLabel.text! += "3"
+    }
+    
+    @objc private func fourDidTapped() {
+        mainOutputLabel.text! += "4"
+    }
+    
+    @objc private func fiveDidTapped() {
+        mainOutputLabel.text! += "5"
+    }
+    
+    @objc private func sixDidTapped() {
+        mainOutputLabel.text! += "6"
+    }
+    
+    @objc private func sevenDidTapped() {
+        mainOutputLabel.text! += "7"
+    }
+    
+    @objc private func eightDidTapped() {
+        mainOutputLabel.text! += "8"
+    }
+    
+    @objc private func nineDidTapped() {
+        mainOutputLabel.text! += "9"
+    }
+    
+    @objc private func plusDidTapped() {
+        arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
+        selectedOperation = .plus
+        mainOutputLabel.text = ""
+    }
+    
+    @objc private func minusDidTapped() {
+        arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
+        selectedOperation = .minus
+        mainOutputLabel.text = ""
+    }
+    
+    @objc private func multiplicationDidTapped() {
+        arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
+        selectedOperation = .multiplication
+        mainOutputLabel.text = ""
+    }
+    
+    @objc private func divisionDidTapped() {
+        arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
+        selectedOperation = .division
+        mainOutputLabel.text = ""
+    }
+    
+    @objc private func clearFieldDidTapped() {
+        mainOutputLabel.text = ""
+        arrayOfValues.removeAll()
+    }
+    
+    @objc private func equalDidTapped() {
+        arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
+        calculateResult()
+        arrayOfValues.removeAll()
     }
 }
 
