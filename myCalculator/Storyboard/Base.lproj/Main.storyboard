@@ -177,16 +177,6 @@
                     </view>
                     <connections>
                         <outlet property="mainOutputLabel" destination="WPv-Np-uDe" id="Vs9-TD-UrF"/>
-                        <outletCollection property="numbersOutletCollection" destination="gxA-qc-bg8" collectionClass="NSMutableArray" id="G0a-O3-Gmf"/>
-                        <outletCollection property="numbersOutletCollection" destination="MnH-pG-7rn" collectionClass="NSMutableArray" id="ax1-Qc-Zye"/>
-                        <outletCollection property="numbersOutletCollection" destination="Gf3-8n-x8X" collectionClass="NSMutableArray" id="hOF-3z-urn"/>
-                        <outletCollection property="numbersOutletCollection" destination="2t1-se-BT3" collectionClass="NSMutableArray" id="sAL-on-SUy"/>
-                        <outletCollection property="numbersOutletCollection" destination="geA-Bc-bkT" collectionClass="NSMutableArray" id="xc0-ul-3No"/>
-                        <outletCollection property="numbersOutletCollection" destination="0hm-Mk-0CS" collectionClass="NSMutableArray" id="CgH-6L-kD6"/>
-                        <outletCollection property="numbersOutletCollection" destination="cOS-vg-vJ2" collectionClass="NSMutableArray" id="uWi-7U-QEC"/>
-                        <outletCollection property="numbersOutletCollection" destination="9iI-hl-oft" collectionClass="NSMutableArray" id="cqd-dm-9q7"/>
-                        <outletCollection property="numbersOutletCollection" destination="FhO-Je-dzr" collectionClass="NSMutableArray" id="PB6-fc-ncy"/>
-                        <outletCollection property="numbersOutletCollection" destination="7H2-iN-34Y" collectionClass="NSMutableArray" id="syc-eH-KES"/>
                         <outletCollection property="operationsOutletCollection" destination="orV-YY-85O" collectionClass="NSMutableArray" id="Jty-fA-IxU"/>
                         <outletCollection property="operationsOutletCollection" destination="orV-YY-85O" collectionClass="NSMutableArray" id="Mqq-UX-owL"/>
                         <outletCollection property="operationsOutletCollection" destination="u2R-tQ-nfd" collectionClass="NSMutableArray" id="b34-45-S4b"/>
@@ -194,6 +184,16 @@
                         <outletCollection property="operationsOutletCollection" destination="1gv-x8-8cl" collectionClass="NSMutableArray" id="J68-Th-y6X"/>
                         <outletCollection property="operationsOutletCollection" destination="OEc-Jk-lMa" collectionClass="NSMutableArray" id="Tl3-gL-WpW"/>
                         <outletCollection property="operationsOutletCollection" destination="jYU-2M-dla" collectionClass="NSMutableArray" id="1hb-5U-9sf"/>
+                        <outletCollection property="numbersOutletCollection" destination="gxA-qc-bg8" collectionClass="NSMutableArray" id="JEG-y3-3Lm"/>
+                        <outletCollection property="numbersOutletCollection" destination="MnH-pG-7rn" collectionClass="NSMutableArray" id="x1K-wu-xxm"/>
+                        <outletCollection property="numbersOutletCollection" destination="Gf3-8n-x8X" collectionClass="NSMutableArray" id="YJh-M5-51v"/>
+                        <outletCollection property="numbersOutletCollection" destination="2t1-se-BT3" collectionClass="NSMutableArray" id="iMs-Zt-DYs"/>
+                        <outletCollection property="numbersOutletCollection" destination="cOS-vg-vJ2" collectionClass="NSMutableArray" id="Tsj-ld-rkS"/>
+                        <outletCollection property="numbersOutletCollection" destination="0hm-Mk-0CS" collectionClass="NSMutableArray" id="Ll0-ac-amw"/>
+                        <outletCollection property="numbersOutletCollection" destination="geA-Bc-bkT" collectionClass="NSMutableArray" id="NXt-vR-V2E"/>
+                        <outletCollection property="numbersOutletCollection" destination="7H2-iN-34Y" collectionClass="NSMutableArray" id="NQp-MJ-EFD"/>
+                        <outletCollection property="numbersOutletCollection" destination="FhO-Je-dzr" collectionClass="NSMutableArray" id="LV8-JM-jKR"/>
+                        <outletCollection property="numbersOutletCollection" destination="9iI-hl-oft" collectionClass="NSMutableArray" id="Cpb-Bm-FGV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
