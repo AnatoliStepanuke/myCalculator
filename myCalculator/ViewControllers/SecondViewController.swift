@@ -33,6 +33,7 @@ final class SecondViewController: UIViewController {
         super.viewDidLoad()
         roundedButtons()
         setupButtonActions()
+        indentationAroundButtons()
     }
 
     // MARK: - Setups
@@ -119,6 +120,12 @@ final class SecondViewController: UIViewController {
 
     private func roundedButtons() {
         (numbersOutletCollection + operationsOutletCollection).forEach { $0.roundedButton() } // 🥤
+    }
+    
+    private func indentationAroundButtons() {
+        (numbersOutletCollection + operationsOutletCollection).forEach {
+            $0.makeWhiteBorder(borderWidth: 3.0)
+        }
     }
 
     // MARK: - Objc methods
