@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC4A71F8271B00800071E7A4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4A71F7271B00800071E7A4 /* SecondViewController.swift */; };
+		DC4A71F8271B00800071E7A4 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4A71F7271B00800071E7A4 /* MainScreenViewController.swift */; };
 		DC9DFE542706249B0058D817 /* UIButton+roundedCorner+indentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9DFE532706249B0058D817 /* UIButton+roundedCorner+indentation.swift */; };
 		DCB3150426FB2DD300F1CB2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3150326FB2DD300F1CB2C /* AppDelegate.swift */; };
 		DCB3150626FB2DD300F1CB2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB3150526FB2DD300F1CB2C /* SceneDelegate.swift */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DC4A71F7271B00800071E7A4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DC4A71F7271B00800071E7A4 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		DC9DFE532706249B0058D817 /* UIButton+roundedCorner+indentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+roundedCorner+indentation.swift"; sourceTree = "<group>"; };
 		DCB3150026FB2DD300F1CB2C /* myCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCB3150326FB2DD300F1CB2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,12 +39,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		74EA647827061E3A003B6024 /* ViewControllers */ = {
+		74EA647827061E3A003B6024 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DC4A71F7271B00800071E7A4 /* SecondViewController.swift */,
+				DC4A71F7271B00800071E7A4 /* MainScreenViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		74EA647927061E4E003B6024 /* Storyboard */ = {
@@ -56,13 +56,13 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		74EA647A27061F1B003B6024 /* App */ = {
+		74EA647A27061F1B003B6024 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				DCB3150326FB2DD300F1CB2C /* AppDelegate.swift */,
 				DCB3150526FB2DD300F1CB2C /* SceneDelegate.swift */,
 			);
-			path = App;
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		74EA647B27062000003B6024 /* Resources */ = {
@@ -73,12 +73,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		DC9DFE55270624A70058D817 /* Extensions */ = {
+		DC9DFE55270624A70058D817 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				DC9DFE532706249B0058D817 /* UIButton+roundedCorner+indentation.swift */,
 			);
-			path = Extensions;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		DCB314F726FB2DD300F1CB2C = {
@@ -100,11 +100,11 @@
 		DCB3150226FB2DD300F1CB2C /* myCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				DC9DFE55270624A70058D817 /* Extensions */,
+				DC9DFE55270624A70058D817 /* Extension */,
 				74EA647B27062000003B6024 /* Resources */,
-				74EA647A27061F1B003B6024 /* App */,
+				74EA647A27061F1B003B6024 /* AppDelegate */,
 				74EA647927061E4E003B6024 /* Storyboard */,
-				74EA647827061E3A003B6024 /* ViewControllers */,
+				74EA647827061E3A003B6024 /* Controller */,
 				DCB3151126FB2DD400F1CB2C /* Info.plist */,
 			);
 			path = myCalculator;
@@ -182,7 +182,7 @@
 			files = (
 				DCB3150426FB2DD300F1CB2C /* AppDelegate.swift in Sources */,
 				DC9DFE542706249B0058D817 /* UIButton+roundedCorner+indentation.swift in Sources */,
-				DC4A71F8271B00800071E7A4 /* SecondViewController.swift in Sources */,
+				DC4A71F8271B00800071E7A4 /* MainScreenViewController.swift in Sources */,
 				DCB3150626FB2DD300F1CB2C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
