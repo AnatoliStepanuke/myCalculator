@@ -56,53 +56,66 @@ final class MainScreenViewController: UIViewController {
         }
     }
     
+    private func setupPlusAction(values: [Int]) -> Int {
+        var result = 0
+        values.forEach { value in
+            result &+= value
+        }
+        return result
+    }
+    
+    private func setupMinusAction(values: [Int]) -> Int {
+        var result = 0
+        var buffer = 0
+        var counter = 0
+        values.forEach { value in
+            if counter == 0 {
+                buffer = value
+            } else {
+                result = buffer &- value
+            }
+            counter += 1
+        }
+        return result
+    }
+    
+    private func setupMultiplicationAction(values: [Int]) -> Int {
+        var result = 1
+        arrayOfValues.forEach { value in
+            result &*= value
+        }
+        return result
+    }
+    
+    private func setupDivisionAction(values:[Int]) -> Int {
+        var result = 0
+        var counter = 0
+        var buffer = 0
+        arrayOfValues.forEach { value in
+            if counter == 0 {
+                buffer = value
+            } else if value == 0 {
+                mainOutputLabel.text = "error."
+            } else {
+                result = buffer / value
+                mainOutputLabel.text = "\(result)"
+            }
+            counter += 1
+        }
+        return result
+    }
+    
     // MARK: - Helpers
     private func calculateResult() {
         switch selectedOperation {
         case .plus:
-            var result = 0
-            arrayOfValues.forEach { value in
-                result += value
-            }
-            mainOutputLabel.text = "\(result)"
-            
+            mainOutputLabel.text = "\(setupPlusAction(values: arrayOfValues))"
         case .minus:
-            var result = 0
-            var tmp = 0
-            var counter = 0
-            arrayOfValues.forEach { value in
-                if counter == 0 {
-                    tmp = value
-                } else {
-                    result = tmp - value
-                }
-                counter += 1
-            }
-            mainOutputLabel.text = "\(result)"
-            
+            mainOutputLabel.text = "\(setupMinusAction(values: arrayOfValues))"
         case .multiplication:
-            var result = 1
-            arrayOfValues.forEach { value in
-                result *= value
-            }
-            mainOutputLabel.text = "\(result)"
-            
+            mainOutputLabel.text = "\(setupMultiplicationAction(values: arrayOfValues))"
         case .division:
-            var result = 0
-            var counter = 0
-            var buffer = 0
-            
-            arrayOfValues.forEach { value in
-                if counter == 0 {
-                    buffer = value
-                } else if value == 0 {
-                    mainOutputLabel.text = "error."
-                } else {
-                    result = buffer / value
-                    mainOutputLabel.text = "\(result)"
-                }
-                counter += 1
-            }
+            mainOutputLabel.text = "\(setupDivisionAction(values: arrayOfValues))"
         case .clearField: mainOutputLabel.text = ""
         case .none: break
         }
