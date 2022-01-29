@@ -1,7 +1,6 @@
 import UIKit
 
 final class MainScreenViewController: UIViewController {
-    
     // MARK: - Outlets
     @IBOutlet private var mainOutputLabel: UILabel!
     @IBOutlet private var numbersOutletCollection: [UIButton]!
@@ -127,7 +126,7 @@ final class MainScreenViewController: UIViewController {
     
     private func bufferAroundButtons() {
         (numbersOutletCollection + operationsOutletCollection).forEach {
-            $0.makeWhiteBorder(borderWidth: 3.0)
+            $0.makeBorder(borderWidth: 3.0)
         }
     }
     
@@ -169,5 +168,14 @@ final class MainScreenViewController: UIViewController {
         arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
         calculateResult()
         arrayOfValues.removeAll()
+    }
+    
+    // MARK: - TraitCollection
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+       if #available(iOS 13.0, *) {
+           if (traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection)) {
+               (numbersOutletCollection + operationsOutletCollection).forEach { $0.fillBorderWithColor()}
+           }
+       }
     }
 }
