@@ -5,7 +5,7 @@ final class MainScreenViewController: UIViewController {
     @IBOutlet private var mainOutputLabel: UILabel!
     @IBOutlet private var numbersOutletCollection: [UIButton]!
     @IBOutlet private var operationsOutletCollection: [UIButton]!
-    
+
     // MARK: - Inner type
     private enum MathOperation {
         case plus
@@ -15,12 +15,12 @@ final class MainScreenViewController: UIViewController {
         case clearField
         case none
     }
-    
+
     // MARK: - Properties
     // MARK: Private
     private var arrayOfValues: [Int] = []
     private var selectedOperation: MathOperation = .none
-    
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ final class MainScreenViewController: UIViewController {
         setupButtonActions()
         bufferAroundButtons()
     }
-    
+
     // MARK: - Setups
     private func setupButtonActions() {
         numbersOutletCollection.enumerated().forEach { index, button in
@@ -54,7 +54,7 @@ final class MainScreenViewController: UIViewController {
             }
         }
     }
-    
+
     private func setupPlusAction(values: [Int]) -> Int {
         var result = 0
         values.forEach { value in
@@ -62,7 +62,7 @@ final class MainScreenViewController: UIViewController {
         }
         return result
     }
-    
+
     private func setupMinusAction(values: [Int]) -> Int {
         var result = 0
         var buffer = 0
@@ -77,7 +77,7 @@ final class MainScreenViewController: UIViewController {
         }
         return result
     }
-    
+
     private func setupMultiplicationAction(values: [Int]) -> Int {
         var result = 1
         arrayOfValues.forEach { value in
@@ -85,8 +85,8 @@ final class MainScreenViewController: UIViewController {
         }
         return result
     }
-    
-    private func setupDivisionAction(values:[Int]) -> Int {
+
+    private func setupDivisionAction(values: [Int]) -> Int {
         var result = 0
         var counter = 0
         var buffer = 0
@@ -103,7 +103,7 @@ final class MainScreenViewController: UIViewController {
         }
         return result
     }
-    
+
     // MARK: - Helpers
     private func calculateResult() {
         switch selectedOperation {
@@ -119,61 +119,61 @@ final class MainScreenViewController: UIViewController {
         case .none: break
         }
     }
-    
+
     private func roundedButtons() {
         (numbersOutletCollection + operationsOutletCollection).forEach { $0.roundedButton() } // 🥤
     }
-    
+
     private func bufferAroundButtons() {
         (numbersOutletCollection + operationsOutletCollection).forEach {
             $0.makeBorder(borderWidth: 3.0)
         }
     }
-    
+
     // MARK: - Objc methods
     @objc private func buttonClicked(sender: UIButton) {
         if mainOutputLabel.text != nil { mainOutputLabel.text! += String(sender.tag) }
     }
-    
+
     @objc private func plusDidTapped() {
         arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
         selectedOperation = .plus
         mainOutputLabel.text = ""
     }
-    
+
     @objc private func minusDidTapped() {
         arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
         selectedOperation = .minus
         mainOutputLabel.text = ""
     }
-    
+
     @objc private func multiplicationDidTapped() {
         arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
         selectedOperation = .multiplication
         mainOutputLabel.text = ""
     }
-    
+
     @objc private func divisionDidTapped() {
         arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
         selectedOperation = .division
         mainOutputLabel.text = ""
     }
-    
+
     @objc private func clearFieldDidTapped() {
         mainOutputLabel.text = ""
         arrayOfValues.removeAll()
     }
-    
+
     @objc private func equalDidTapped() {
         arrayOfValues.append(Int(mainOutputLabel.text ?? "") ?? 0)
         calculateResult()
         arrayOfValues.removeAll()
     }
-    
+
     // MARK: - TraitCollection
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
        if #available(iOS 13.0, *) {
-           if (traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection)) {
+           if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
                (numbersOutletCollection + operationsOutletCollection).forEach { $0.fillBorderWithColor()}
            }
        }
