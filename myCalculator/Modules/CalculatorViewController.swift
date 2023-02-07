@@ -1,6 +1,7 @@
 import UIKit
+import Combine
 
-final class MainScreenViewController: UIViewController {
+final class CalculatorViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet private var mainOutputLabel: UILabel!
     @IBOutlet private var numbersOutletCollection: [UIButton]!
