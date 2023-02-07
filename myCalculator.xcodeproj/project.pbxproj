@@ -52,13 +52,13 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		74EA647A27061F1B003B6024 /* AppDelegates */ = {
+		74EA647A27061F1B003B6024 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
 				DCB3150326FB2DD300F1CB2C /* AppDelegate.swift */,
 				DCB3150526FB2DD300F1CB2C /* SceneDelegate.swift */,
 			);
-			path = AppDelegates;
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		DC44DD0A299272DF00E8C877 /* Modules */ = {
@@ -106,8 +106,8 @@
 		DCB3150226FB2DD300F1CB2C /* myCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				74EA647A27061F1B003B6024 /* AppDelegates */,
 				DCA58D6227A472EF0075FDD7 /* Assets */,
+				74EA647A27061F1B003B6024 /* Delegates */,
 				DC9DFE55270624A70058D817 /* Extensions */,
 				DCB3151126FB2DD400F1CB2C /* Info.plist */,
 				DC44DD0A299272DF00E8C877 /* Modules */,
