@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC44DD102992751F00E8C877 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC44DD0F2992751F00E8C877 /* CalculatorViewModel.swift */; };
 		DC4A71F8271B00800071E7A4 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4A71F7271B00800071E7A4 /* CalculatorViewController.swift */; };
 		DC5E92E027A47350009BC60F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5E92DF27A47350009BC60F /* Colors.swift */; };
 		DC9DFE542706249B0058D817 /* UIButton+roundedCorner+border.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9DFE532706249B0058D817 /* UIButton+roundedCorner+border.swift */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DC44DD0F2992751F00E8C877 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		DC4A71F7271B00800071E7A4 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		DC5E92DF27A47350009BC60F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DC9DFE532706249B0058D817 /* UIButton+roundedCorner+border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+roundedCorner+border.swift"; sourceTree = "<group>"; };
@@ -61,13 +59,12 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
-		DC44DD0A299272DF00E8C877 /* Modules */ = {
+		DC44DD0A299272DF00E8C877 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				DC4A71F7271B00800071E7A4 /* CalculatorViewController.swift */,
-				DC44DD0F2992751F00E8C877 /* CalculatorViewModel.swift */,
 			);
-			path = Modules;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		DC9DFE55270624A70058D817 /* Extensions */ = {
@@ -110,7 +107,7 @@
 				74EA647A27061F1B003B6024 /* Delegates */,
 				DC9DFE55270624A70058D817 /* Extensions */,
 				DCB3151126FB2DD400F1CB2C /* Info.plist */,
-				DC44DD0A299272DF00E8C877 /* Modules */,
+				DC44DD0A299272DF00E8C877 /* Controllers */,
 				74EA647927061E4E003B6024 /* Storyboards */,
 			);
 			path = myCalculator;
@@ -212,7 +209,6 @@
 				DC5E92E027A47350009BC60F /* Colors.swift in Sources */,
 				DC9DFE542706249B0058D817 /* UIButton+roundedCorner+border.swift in Sources */,
 				DC4A71F8271B00800071E7A4 /* CalculatorViewController.swift in Sources */,
-				DC44DD102992751F00E8C877 /* CalculatorViewModel.swift in Sources */,
 				DCB3150626FB2DD300F1CB2C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
